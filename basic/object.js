@@ -16,24 +16,24 @@
 */
     // we can also used symbol as keys in object like this : 
 
-     const mySym = Symbol("key_1")
+    //  const mySym = Symbol("key_1")
 
  
-    const user = {
+    // const user = {
 
-        [mySym]: "key_1", // In js syntax we can can use Symbol as a key in object inside the square bracket. and also accses as user[mySym] 
+    //     [mySym]: "key_1", // In js syntax we can can use Symbol as a key in object inside the square bracket. and also accses as user[mySym] 
 
-        name : "ankit",
-        age : 18,
-        location : "Lucknow",
-        email : "ak@gmail.com",
-        "other_mail": "ak@google.com" // We can also give the key name as string because we know that in background the keys are store as String format.
+    //     name : "ankit",
+    //     age : 18,
+    //     location : "Lucknow",
+    //     email : "ak@gmail.com",
+    //     "other_mail": "ak@google.com" // We can also give the key name as string because we know that in background the keys are store as String format.
          // we can't accses the other_mail by . opration  like user.other_mail (  give the error ......)
          // we can accses the "other_mail" key by user["other-mail"] there is no another ways to accses the other_mail key in user object
     
         
         
-        }      
+        // }      
      
     // console.log(user.name);
 
@@ -47,14 +47,14 @@
 
 // We can also use the function inside the object like this :
 
-user.states = function(){
+// user.states = function(){
 
-    console.log(`Hello JS user, ${this.name}`);
+//     console.log(`Hello JS user, ${this.name}`);
 
-}
+// }
 
 // console.log(user.states); // it return the reference of function.
-console.log(user.states());
+// console.log(user.states());
 
 /* 2) Creating object using the 'new' keyword :
                                              this method of object creation resembles the way objects are in class-based languages, like java 
@@ -64,11 +64,47 @@ console.log(user.states());
 
     a) Using the 'new' keyword with in-build object constructor, like this
  */
-       const person = new Object()
+    //    const person = new Object() // its create a singleton object
     
     // After the creation of object we can add the properties to this object
 
-       person.firstName = 'FirstName';
-       person.lastName = 'LastName';
+    //    person.firstName = 'FirstName';
+    //    person.lastName = 'LastName';
 
-       console.log(person.firstName, person.lastName);
+    //    console.log(person.firstName, person.lastName);
+
+    // const regularUser = {
+    //     email: "username@gmail.com",
+
+    //     fullname: {
+
+    //         userfullname: {
+    //             frrstname:"Ankit",
+    //             lastname: "Kumar"                    
+    //         }
+    //     }
+
+    // }
+
+// console.log(person,regularUser);
+
+// const obj = Object.assign({},person,regularUser)
+
+// const obj = {...person,...regularUser}
+// console.log(obj);
+
+// ObjectName.hasOwnProperty('Name Of the property') return true an false is value are present or not.
+
+// date = 20/10/2023
+
+// __object Destructoring__
+
+// const course = {
+//     coursename: "js",
+//     price: "free",
+//     courseInstructor : "youtube"
+// }
+
+// const {courseInstructor: instructor} = course
+// console.log(courseInstructor);
+// console.log(instructor);
